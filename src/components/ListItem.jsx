@@ -1,11 +1,12 @@
 function ListItem({ value, indexNumber, todolist, setTodolist, onToggle }) {
   const deletRow = () => {
     const finalData = todolist.filter((value, index) => index != indexNumber)
+    // console.log(finalData)
     setTodolist(finalData)
   }
 
   return (
-    <li className={value.completed ? 'completetodo' : ''}>
+    <li>
       <input
         type="checkbox"
         checked={value.completed}
